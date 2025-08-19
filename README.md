@@ -97,3 +97,176 @@ user@Baraka MINGW64 ~/Gym-Git-Exercise-Solutions (main)
 $
 
 ```
+### Exercise 2
+```bash
+
+user@Baraka MINGW64 ~
+$ cd git-exercise-1
+
+user@Baraka MINGW64 ~/git-exercise-1 (dev)
+$ git branch
+* dev
+  main
+
+user@Baraka MINGW64 ~/git-exercise-1 (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+user@Baraka MINGW64 ~/git-exercise-1 (dev)
+$ git checkout main
+Switched to branch 'main'
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git add home.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git stash save "Added home.html"
+Saved working directory and index state On main: Added home.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git add about.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git stash save "Add about.html"
+Saved working directory and index state On main: Add about.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git add team.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git stash save "Add team.html"
+Saved working directory and index state On main: Add team.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git stash list
+stash@{0}: On main: Add team.html
+stash@{1}: On main: Add about.html
+stash@{2}: On main: Added home.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git stash pop stash@{1}
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (29f42c09e80dcc2d71669ef9a4745035df1a64e2)
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git stash list
+stash@{0}: On main: Add team.html
+stash@{1}: On main: Added home.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git stash pop stash@{1}
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (5e7be72db23f260da9c1941609ec61d7fcf24d8c)
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git stash list
+stash@{0}: On main: Add team.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git add .
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git commit -m "Add home.html And about.html"
+[main 4998d3b] Add home.html And about.html
+ 2 files changed, 26 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 543 bytes | 181.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Kubanabaraka/git-exercise-1.git
+   5c17c95..4998d3b  main -> main
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git stash pop stash@{0}
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (2f368ae70af95279e5bf400d6ca6e633f4a8ddf8)
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git reset --hard
+HEAD is now at 4998d3b Add home.html And about.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$
+
+```
