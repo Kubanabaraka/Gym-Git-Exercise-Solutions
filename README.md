@@ -754,3 +754,111 @@ user@Baraka MINGW64 ~/git-exercise-1 (ft/faq-page)
 $
 
 ```
+### Exercise 2
+```bash
+user@Baraka MINGW64 ~/git-exercise-1 (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git add .
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+
+$ git commit -m "feat: Add home page content"
+[main f85d520] feat: Add home page content
+ 1 file changed, 3 insertions(+)
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 389 bytes | 389.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Kubanabaraka/git-exercise-1.git
+   e5512b5..f85d520  main -> main
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/home-page-redesign)
+$ git add .
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/home-page-redesign)
+$ git commit -m "feat: Add New Content To Home Page"
+[ft/home-page-redesign 9818ad3] feat: Add New Content To Home Page
+ 1 file changed, 3 insertions(+)
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/home-page-redesign)
+
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 2.37 KiB | 1.18 MiB/s, done.
+Total 14 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting
+remote:      https://github.com/Kubanabaraka/git-exercise-1/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Kubanabaraka/git-exercise-1.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/home-page-redesign)
+$
+
+```
