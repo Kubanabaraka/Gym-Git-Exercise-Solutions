@@ -862,3 +862,74 @@ user@Baraka MINGW64 ~/git-exercise-1 (ft/home-page-redesign)
 $
 
 ```
+
+## Bundle 4 
+### Exercise 1
+```bash
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git remote add git-copy https://github.com/Kubanabaraka/git-exercise-clone.git
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git remote
+git-copy
+origin
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git add home.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git commit -m "feat: Add home page icon"
+[main 2f9a353] feat: Add home page icon
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 311 bytes | 155.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Kubanabaraka/git-exercise-1.git
+   f85d520..2f9a353  main -> main
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git push git-copy
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (23/23), 3.29 KiB | 1.65 MiB/s, done.
+Total 23 (delta 10), reused 9 (delta 2), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (10/10), done.
+To https://github.com/Kubanabaraka/git-exercise-clone.git
+ * [new branch]      main -> main
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git remote -v
+git-copy        https://github.com/Kubanabaraka/git-exercise-clone.git (fetch)
+git-copy        https://github.com/Kubanabaraka/git-exercise-clone.git (push)
+origin  https://github.com/Kubanabaraka/git-exercise-1.git (fetch)
+origin  https://github.com/Kubanabaraka/git-exercise-1.git (push)
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$
+
+```
