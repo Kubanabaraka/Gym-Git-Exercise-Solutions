@@ -456,3 +456,301 @@ user@Baraka MINGW64 ~/gitrevision (ft/service-redesign)
 $
 
 ```
+## Bundle 3 
+### Exercise 1
+```bash
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/team-page)
+$ git status
+On branch ft/team-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/team-page)
+$ git add team.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/team-page)
+$ git commit -m "Add team page"
+[ft/team-page c6e8098] Add team page
+ 1 file changed, 19 insertions(+)
+ create mode 100644 team.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/team-page)
+$  git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 610 bytes | 610.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Kubanabaraka/git-exercise-1/pull/new/ft/team-page
+remote:
+To https://github.com/Kubanabaraka/git-exercise-1.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/team-page)
+$ git log
+commit c6e80989f65d9df9408409ad2131e413d5ddb960 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+Date:   Thu Aug 21 13:22:47 2025 +0200
+
+    Add team page
+
+commit e5512b5b70f0b014b1fa4b571f558cbb23ecdea8 (origin/main, origin/HEAD, main,
+ ft/contact-page)
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+Date:   Thu Aug 21 11:21:52 2025 +0200
+
+    feat: Add new services
+
+commit 65085dee3eb223c2b4508ed048302e5022270efb
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+Date:   Wed Aug 20 22:07:02 2025 +0200
+
+    Main: Add footer and some services
+
+commit c34b57bc67ac8fae54ca1def9ae3cdeae97746de
+Merge: 4998d3b 28e1c6c
+Author: DIVINEakisa <akisadivine11@gmail.com>
+Date:   Wed Aug 20 14:39:11 2025 +0200
+
+    Merge pull request #1 from Kubanabaraka/ft/bundle-2
+
+:
+
+    Add team page
+
+commit e5512b5b70f0b014b1fa4b571f558cbb23ecdea8 (origin/main, origin/HEAD, main, ft/contact-page)
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+Date:   Thu Aug 21 11:21:52 2025 +0200
+
+    feat: Add new services
+
+commit 65085dee3eb223c2b4508ed048302e5022270efb
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+Date:   Wed Aug 20 22:07:02 2025 +0200
+
+    Main: Add footer and some services
+
+commit c34b57bc67ac8fae54ca1def9ae3cdeae97746de
+Merge: 4998d3b 28e1c6c
+Author: DIVINEakisa <akisadivine11@gmail.com>
+Date:   Wed Aug 20 14:39:11 2025 +0200
+
+    Merge pull request #1 from Kubanabaraka/ft/bundle-2
+
+:
+
+    Add team page
+
+commit e5512b5b70f0b014b1fa4b571f558cbb23ecdea8 (origin/main, origin/HEAD, main, ft/contact-page)
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+Date:   Thu Aug 21 11:21:52 2025 +0200
+
+    feat: Add new services
+
+commit 65085dee3eb223c2b4508ed048302e5022270efb
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+Date:   Wed Aug 20 22:07:02 2025 +0200
+
+    Main: Add footer and some services
+
+commit c34b57bc67ac8fae54ca1def9ae3cdeae97746de
+Merge: 4998d3b 28e1c6c
+Author: DIVINEakisa <akisadivine11@gmail.com>
+Date:   Wed Aug 20 14:39:11 2025 +0200
+
+    Merge pull request #1 from Kubanabaraka/ft/bundle-2
+
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/contact-page)
+$ git cherry-pick c6e80989f65d9df9408409ad2131e413d5ddb960
+[ft/contact-page bf214bc] Add team page
+ Date: Thu Aug 21 13:22:47 2025 +0200
+ 1 file changed, 19 insertions(+)
+ create mode 100644 team.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/contact-page)
+$ git add .
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/contact-page)
+$ git commit -m "feat: Add contact page"
+[ft/contact-page 5d81fbc] feat: Add contact page
+ 1 file changed, 17 insertions(+)
+ create mode 100644 contact.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/contact-page)
+$ git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/contact-page)
+$  git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.12 KiB | 1.12 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Kubanabaraka/git-exercise-1/pull/new/ft/contact-page
+remote:
+To https://github.com/Kubanabaraka/git-exercise-1.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        faq.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/faq-page)
+$ git add .
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/faq-page)
+$ git commit -m "feat: Add faq page"
+[ft/faq-page 4dcca76] feat: Add faq page
+ 1 file changed, 21 insertions(+)
+ create mode 100644 faq.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/faq-page)
+$ git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 651 bytes | 651.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Kubanabaraka/git-exercise-1/pull/new/ft/faq-pag
+remote:
+To https://github.com/Kubanabaraka/git-exercise-1.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/faq-page)
+$ git log
+commit 4dcca769f20996dd6ab8be07d8bbfad3fa1b80ff (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+[ft/faq-page 1767d39] Revert "Add team page"
+ 1 file changed, 19 deletions(-)
+ delete mode 100644 team.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/faq-page)
+$ git log
+commit 1767d39b09da3771686bce9aa969ce49e29449b5 (HEAD -> ft/faq-page)
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+Date:   Thu Aug 21 13:54:57 2025 +0200
+
+    Revert "Add team page"
+
+    This reverts commit bf214bc727d507ba4818b13277186b3ec9b01feb.
+
+commit 4dcca769f20996dd6ab8be07d8bbfad3fa1b80ff (origin/ft/faq-page)
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+Date:   Thu Aug 21 13:48:31 2025 +0200
+
+    feat: Add faq page
+
+commit 5d81fbc78b96554778072d43a18346460e2010d8 (origin/ft/contact-page, ft/contact-page)
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+Date:   Thu Aug 21 13:41:21 2025 +0200
+
+    feat: Add contact page
+
+commit bf214bc727d507ba4818b13277186b3ec9b01feb
+Author: Kubanabaraka <byukusengekubanabarakapascal@gmail.com>
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/faq-page)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 283 bytes | 283.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Kubanabaraka/git-exercise-1.git
+   4dcca76..1767d39  ft/faq-page -> ft/faq-page
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/faq-page)
+$
+
+```
