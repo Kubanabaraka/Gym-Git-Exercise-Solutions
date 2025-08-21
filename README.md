@@ -317,3 +317,169 @@ user@Baraka MINGW64 ~/git-exercise-1 (ft/bundle-2)
 $
 
 ```
+
+### Exercise 2
+```bash
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git status
+On branch ft/services-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git add services.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git commit -m "feat: Add services list"
+[ft/services-redesign df08c63] feat: Add services list
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+ user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git push -u origin ft/services-redesign --force
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 383 bytes | 383.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Kubanabaraka/git-exercise-1.git
+ + 8fdcf3e...df08c63 ft/services-redesign -> ft/services-redesign (forced update)
+branch 'ft/services-redesign' set up to track 'origin/ft/services-redesign'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git status
+On branch ft/services-redesign
+Your branch is up to date with 'origin/ft/services-redesign'.
+
+nothing to commit, working tree clean
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git status
+On branch ft/services-redesign
+Your branch is up to date with 'origin/ft/services-redesign'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git add services.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git commit -m  "feat: Add heading"
+[ft/services-redesign 6d6b2b5] feat: Add heading
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git push origin ft/services-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Kubanabaraka/git-exercise-1.git
+   df08c63..6d6b2b5  ft/services-redesign -> ft/services-redesign
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git add services.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git commit -m "feat: Add new services"
+[main e5512b5] feat: Add new services
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 414 bytes | 414.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Kubanabaraka/git-exercise-1.git
+   65085de..e5512b5  main -> main
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git checkout ft/services-redesign
+Switched to branch 'ft/services-redesign'
+Your branch is up to date with 'origin/ft/services-redesign'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git merge main
+Auto-merging services.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ft/services-redesign e7beaf4] Merge branch 'main' into ft/services-redesign
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$ git push origin ft/services-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 466 bytes | 466.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Kubanabaraka/git-exercise-1.git
+   6d6b2b5..e7beaf4  ft/services-redesign -> ft/services-redesign
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/services-redesign)
+$
+
+```
