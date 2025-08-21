@@ -933,3 +933,117 @@ user@Baraka MINGW64 ~/git-exercise-1 (main)
 $
 
 ```
+
+### Exercise 2
+```bash
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/footer)
+$ git status
+On branch ft/footer
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        footer.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/footer)
+$ git add footer.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/footer)
+$ git commit -m "feat: Add Footer File"
+[ft/footer ba8a9da] feat: Add Footer File
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/footer)
+$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   footer.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/footer)
+$ git add footer.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/footer)
+$ git commit -m "feat: Add Footer Content"
+[ft/footer aec0978] feat: Add Footer Content
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/footer)
+$  git push --set-upstream origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 750 bytes | 250.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Kubanabaraka/git-exercise-1/pull/new/ft/footer
+remote:
+To https://github.com/Kubanabaraka/git-exercise-1.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@Baraka MINGW64 ~/git-exercise-1 (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/squashing)
+$ git merge --squash ft/footer
+Updating 2f9a353..aec0978
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ create mode 100644 footer.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/squashing)
+$ git commit -m "feat: footer changes squashing"
+[ft/squashing b168886] feat: footer changes squashing
+ 1 file changed, 13 insertions(+)
+ create mode 100644 footer.html
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/squashing)
+$ git push origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 472 bytes | 472.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Kubanabaraka/git-exercise-1/pull/new/ft/squashing
+remote:
+To https://github.com/Kubanabaraka/git-exercise-1.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+user@Baraka MINGW64 ~/git-exercise-1 (ft/squashing)
+$
+
+```
