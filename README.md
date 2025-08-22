@@ -1220,3 +1220,68 @@ user@Baraka MINGW64 ~/git-cafe-exercise (bugFix/contact-title)
 $
 
 ```
+
+### Exercise 3
+```bash
+user@Baraka MINGW64 ~/git-cafe-exercise (main)
+$ git checkout -b hotFix/contact-telephone
+Switched to a new branch 'hotFix/contact-telephone'
+
+user@Baraka MINGW64 ~/git-cafe-exercise (hotFix/contact-telephone)
+$ git status
+On branch hotFix/contact-telephone
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@Baraka MINGW64 ~/git-cafe-exercise (hotFix/contact-telephone)
+$ git add .
+
+user@Baraka MINGW64 ~/git-cafe-exercise (hotFix/contact-telephone)
+$ git status
+On branch hotFix/contact-telephone
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Contact.html
+
+
+user@Baraka MINGW64 ~/git-cafe-exercise (hotFix/contact-telephone)
+$ git commit -m "hotFix: Change the telephone number"
+[hotFix/contact-telephone 87cf798] hotFix: Change the telephone number
+ 1 file changed, 204 insertions(+)
+ create mode 100644 Contact.html
+
+user@Baraka MINGW64 ~/git-cafe-exercise (hotFix/contact-telephone)
+$ git push
+fatal: The current branch hotFix/contact-telephone has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin hotFix/contact-telephone
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@Baraka MINGW64 ~/git-cafe-exercise (hotFix/contact-telephone)
+$  git push --set-upstream origin hotFix/contact-telephone
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.51 KiB | 2.51 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'hotFix/contact-telephone' on GitHub by visiting:
+remote:      https://github.com/Kubanabaraka/git-cafe-exercise/pull/new/hotFix/contact-telephone
+remote:
+To https://github.com/Kubanabaraka/git-cafe-exercise.git
+ * [new branch]      hotFix/contact-telephone -> hotFix/contact-telephone
+branch 'hotFix/contact-telephone' set up to track 'origin/hotFix/contact-telephone'.
+
+user@Baraka MINGW64 ~/git-cafe-exercise (hotFix/contact-telephone)
+$
+
+```
