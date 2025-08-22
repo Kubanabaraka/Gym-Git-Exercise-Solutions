@@ -1159,3 +1159,64 @@ user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
 $
 
 ```
+### Exercise 2
+```bash
+user@Baraka MINGW64 ~/git-cafe-exercise (main)
+$ git checkout -b bugFix/contact-title
+Switched to a new branch 'bugFix/contact-title'
+
+user@Baraka MINGW64 ~/git-cafe-exercise (bugFix/contact-title)
+$ git status
+On branch bugFix/contact-title
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    index-4.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Baraka MINGW64 ~/git-cafe-exercise (bugFix/contact-title)
+$ git add .
+
+user@Baraka MINGW64 ~/git-cafe-exercise (bugFix/contact-title)
+$ git commit -m "bugFix: Change index-4 title to Contact"
+[bugFix/contact-title 1f14bd6] bugFix: Change index-4 title to Contact
+ 1 file changed, 203 insertions(+), 203 deletions(-)
+ rename index-4.html => Contact.html (98%)
+
+user@Baraka MINGW64 ~/git-cafe-exercise (bugFix/contact-title)
+$ git push
+fatal: The current branch bugFix/contact-title has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bugFix/contact-title
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@Baraka MINGW64 ~/git-cafe-exercise (bugFix/contact-title)
+$  git push --set-upstream origin bugFix/contact-title
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.52 KiB | 2.52 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bugFix/contact-title' on GitHub by visiting:
+remote:      https://github.com/Kubanabaraka/git-cafe-exercise/pull/new/bugFix/contact-title
+remote:
+To https://github.com/Kubanabaraka/git-cafe-exercise.git
+ * [new branch]      bugFix/contact-title -> bugFix/contact-title
+branch 'bugFix/contact-title' set up to track 'origin/bugFix/contact-title'.
+
+user@Baraka MINGW64 ~/git-cafe-exercise (bugFix/contact-title)
+$
+
+```
