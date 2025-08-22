@@ -1285,3 +1285,56 @@ user@Baraka MINGW64 ~/git-cafe-exercise (hotFix/contact-telephone)
 $
 
 ```
+
+### Exercise 4
+```bash
+$ git checkout ft/menu-page
+Switched to branch 'ft/menu-page'
+Your branch is up to date with 'origin/ft/menu-page'.
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git status
+On branch ft/menu-page
+Your branch is up to date with 'origin/ft/menu-page'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   menu.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git add menu.html
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git status
+On branch ft/menu-page
+Your branch is up to date with 'origin/ft/menu-page'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   menu.html
+
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git commit -m "feat: Add footer to the menu page"
+[ft/menu-page 5a364c4] feat: Add footer to the menu page
+ 1 file changed, 3 insertions(+)
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 392 bytes | 392.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Kubanabaraka/git-cafe-exercise.git
+   22f3cda..5a364c4  ft/menu-page -> ft/menu-page
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$
+
+```
