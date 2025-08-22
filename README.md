@@ -1102,3 +1102,60 @@ user@Baraka MINGW64 ~/git-cafe-exercise (main)
 $
 
 ```
+## Bundle 6 
+### Exercise 1
+```bash
+user@Baraka MINGW64 ~/git-cafe-exercise (main)
+$ git checkout -b ft/menu-page
+Switched to a new branch 'ft/menu-page'
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git status
+On branch ft/menu-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        menu.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git add menu.html
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git commit -m "feat: Add menu page and the content"
+[ft/menu-page 22f3cda] feat: Add menu page and the content
+ 1 file changed, 20 insertions(+)
+ create mode 100644 menu.html
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$ git push
+fatal: The current branch ft/menu-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/menu-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$  git push --set-upstream origin ft/menu-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 553 bytes | 276.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/menu-page' on GitHub by visiting:
+remote:      https://github.com/Kubanabaraka/git-cafe-exercise/pull/new/ft/menu-page
+remote:
+To https://github.com/Kubanabaraka/git-cafe-exercise.git
+ * [new branch]      ft/menu-page -> ft/menu-page
+branch 'ft/menu-page' set up to track 'origin/ft/menu-page'.
+
+user@Baraka MINGW64 ~/git-cafe-exercise (ft/menu-page)
+$
+
+```
